@@ -4,7 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        total = sum(nums)
+        left = 0
+
         for i in range(len(nums)):
-            if sum(nums[0:i])==sum(nums[i+1:]):
+            if left == total - left - nums[i]:
                 return i
+
+            left += nums[i]
+
         return -1
