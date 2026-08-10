@@ -10,4 +10,5 @@ class Solution(object):
                 if s[i]>s[i+1]:
                     s[i],s[i+1]=s[i+1],s[i]
                     break
+                i+=1
         return "".join(s)
